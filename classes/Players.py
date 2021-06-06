@@ -23,6 +23,8 @@ class Players():
         raise ValueError
     except ValueError:
       print("Graczy może być tylko 2 - 4, z czego przynajmniej jeden musi być człowiekiem!")
+      print()
+      return self.create_players()
     for i in range(1, cpus_number + 1):
       self.__players.append(CPU(i))
     for i in range(1, players_number - cpus_number + 1):
